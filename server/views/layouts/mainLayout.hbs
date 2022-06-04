@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- Iconos de google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Cargando Materilizecss -->
+    <link rel="stylesheet" href="/vendor/materializecss/css/materialize.min.css">
+    <!-- Cargando etilos de la app -->
+    <link rel='stylesheet' href='/stylesheets/styles.css' />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+         
+          <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 32px;
+      }
+      #reg {
+      padding: 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+    </style>
+  </head>
+  <body>
+    {{!-- Llamando a la vista parcial de la navbar  --}}
+    {{> _navbar}}
+    <div class="container">
+      {{{body}}}
+    </div>
+    <!-- Materialize script -->
+    <script src="/vendor/materializecss/js/materialize.min.js"></script>
+    <!-- Bundle de la App -->
+    <script src="/javascripts/bundle.js"></script>
+  </body>
+</html>

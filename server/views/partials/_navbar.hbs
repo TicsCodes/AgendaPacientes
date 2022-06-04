@@ -1,0 +1,57 @@
+<!-- Se crea una estructura Dropdown -->
+<ul id="dropdownMenu" class="dropdown-content">
+  <!-- Operaciones -->
+  {{> _operations}}
+  <!-- fin Operaciones -->
+</ul>
+<nav class="#1b5e20 green darken-4">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">
+        🤖🤖Catalin Relaxing🤖🤖
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <a href="/">
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a href="/about">
+            Acerca de...
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-trigger" href="#" data-target="dropdownMenu">
+            Acciones
+            <i class="material-icons right">
+              arrow_drop_down
+            </i>
+          </a>
+        </li>
+      </ul>
+      <!-- Visualizción de navegacion par amoviles -->
+      <a href="#" data-target="slide-out" class="sidenav-trigger">
+        <i class="material-icons">
+          menu
+        </i>
+      </a>
+      <ul id="slide-out" class="sidenav">
+        <li>
+          <a href="/">
+            Inicio
+          </a>
+        </li>
+        <!-- Operaciones -->
+        {{> _operations}}
+        <!-- Divisor -->
+        <li class="divider"></li>
+        <li>
+          <a href="/about">
+            Acerda De...
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,111 @@
+<div class='row'>
+  <div class='col s12 m10 offset-m1 l8 offset-l2'>
+    <div class='card'>
+      <div class='card-image'>
+        <img src='/images/logo.jpg' />
+        <span class='card-title'>
+          <i class='material-icons prefix'>mode_edit</i>
+          Registrar Paciente
+        </span>
+      </div>
+
+      <form autocomplete='off' action='/projects/add' method='POST'>
+        <div class='card-content'>
+
+          <div class='input-field'>
+            <i class='material-icons prefix'>account_circle</i>
+            <label for='project-name'>
+              Nombre
+            </label>
+            <input
+              placeholder='Ingrese el nombre del paciente'
+              type='text'
+              name='name'
+              id='project-name'
+              class='validate'
+            />
+          </div>
+
+          <div class='input-field'>
+            <i class='material-icons prefix'> business </i>
+            <label for='project-ocupation'>
+              Ocupación
+            </label>
+            <textarea
+              placeholder='Ingrese ocupación del paciente'
+              type='text'
+              name='ocupation'
+              id='project-ocupation'
+              class='materialize-textarea'
+            ></textarea>
+          </div>
+
+          <div class='input-field'>
+            <i class='material-icons prefix'> date_range </i>
+            <label for='project-date'>
+              Fecha de la cita
+            </label>
+            <input
+              type='date'
+              class='datepicker'
+              name='date'
+              id='project-date'
+              class='materialize-textarea'
+            />
+          </div>
+
+          <div class='input-field'>
+            <i class='material-icons prefix'> watch_later </i>
+            <label for='project-hour'>
+              Hora de la cita
+            </label>
+            <input type="time" 
+             min="09:00" max="18:00" required
+              name='hour'
+              id='project-hour'
+              class='materialize-textarea'
+            ></textarea>
+          </div>
+
+          <div class='input-field'>
+            <i class='material-icons prefix'> dialer_sip </i>
+            <label for='project-tel'>
+              Teléfono
+            </label>
+            <textarea
+            type="number"
+              name='tel'
+              id='project-tel'
+              class='materialize-textarea'
+            ></textarea>
+          </div>
+
+          <div class='input-field'>
+            <i class='material-icons prefix'> email </i>
+            <label for='project-mail'>
+              e-mail
+            </label>
+            <textarea
+              name='mail'
+              id='project-mail'
+              class='materialize-textarea'
+            ></textarea>
+          </div>
+
+          <div class='card-action'>
+            <button
+              type='submit'
+              class='blue darken-3 waves-effect waves-light btn'
+            >
+              <i class='material-icons left'>
+                save
+              </i>
+              Registrar
+            </button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
