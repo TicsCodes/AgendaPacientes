@@ -1,6 +1,5 @@
 // 1 ODM - Mongoose
 import mongoose from 'mongoose';
-import { number } from 'yup';
 
 // 2 Desestructuracion del modulo de esquemas (Schemas) de Mongoose
 const { Schema } = mongoose;
@@ -20,7 +19,11 @@ const ProjectSchema = new Schema({
     default: Date.now,
   },
   tel: {
-    type: number,
+    type: Number,
+    required: true,
+  },
+  mail: {
+    type: String,
     required: true,
   },
 });

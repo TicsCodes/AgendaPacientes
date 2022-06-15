@@ -23,7 +23,16 @@
               name='name'
               id='project-name'
               class='validate'
+              value="{{project.name}}"
+              required
             />
+            <span 
+            class="helper-text" 
+            data-error="Debe ingresar nombre del paciente"
+            data-success="Correcto"></span>
+            {{#if errorModel.nameError}}
+            <span style="color:red">Error: {{errorModel.nameError}}</span>
+            {{/if}}          
           </div>
 
           <div class='input-field'>
@@ -37,7 +46,18 @@
               name='ocupation'
               id='project-ocupation'
               class='materialize-textarea'
+              required
             ></textarea>
+            {{project.ocupation}}
+            <span
+            class="helper-text"
+            data-error="Debe ingresar ocupación del paciente"
+            data-success="Correcto"></span>
+            {{#if errorModel.ocupationError}}
+            <span style="color:red"> 
+              Error: {{errorModel.ocupationError}}
+            </span>
+            {{/if}}
           </div>
 
           <div class='input-field'>
@@ -51,7 +71,16 @@
               name='date'
               id='project-date'
               class='materialize-textarea'
+              value="{{project.date}}"
+              required
             />
+            <span 
+            class="helper-text" 
+            data-error="Ingrese fecha para cita"
+            data-success="Correcto"></span>
+            {{#if errorModel.dateError}}
+            <span style="color:red">Error: {{errorModel.dateError}}</span>
+            {{/if}} 
           </div>
 
           <div class='input-field'>
@@ -60,11 +89,20 @@
               Hora de la cita
             </label>
             <input type="time" 
-             min="09:00" max="18:00" required
+             min="10:00" max="19:00" required
               name='hour'
               id='project-hour'
               class='materialize-textarea'
-            ></textarea>
+              value="{{project.hour}}"
+              required
+            />
+            <span 
+            class="helper-text" 
+            data-error="Ingrese hora de la cita (entre 10:00 am y 07:00 pm)"
+            data-success="Correcto"></span>
+            {{#if errorModel.hourError}}
+            <span style="color:red">Error: {{errorModel.hourError}}</span>
+            {{/if}} 
           </div>
 
           <div class='input-field'>
@@ -78,6 +116,16 @@
               id='project-tel'
               class='materialize-textarea'
             ></textarea>
+            {{project.tel}}
+            <span
+            class="helper-text"
+            data-error="Debe ingresar numero de teléfono a 10 dígitos"
+            data-success="Correcto"></span>
+            {{#if errorModel.telError}}
+            <span style="color:red"> 
+              Error: {{errorModel.telError}}
+            </span>
+            {{/if}}
           </div>
 
           <div class='input-field'>
@@ -90,6 +138,16 @@
               id='project-mail'
               class='materialize-textarea'
             ></textarea>
+            {{project.mail}}
+            <span
+            class="helper-text"
+            data-error="Ingrese correo válido"
+            data-success="Correcto"></span>
+            {{#if errorModel.mailError}}
+            <span style="color:red"> 
+              Error: {{errorModel.mailError}}
+            </span>
+            {{/if}}
           </div>
 
           <div class='card-action'>
