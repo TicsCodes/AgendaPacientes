@@ -10,7 +10,7 @@ const ProjectSchema = new Schema({
     type: String,
     required: true,
   },
-  description: {
+  ocupation: {
     type: String,
     required: true,
   },

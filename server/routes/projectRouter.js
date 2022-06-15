@@ -1,9 +1,8 @@
-// Importando el Router de Express
 import { Router } from 'express';
 
 // Importar el validador
 import Validate from '../validators/validateFactory';
-// Importarmos el esquema de validacion
+// Importamos el esquema de validación
 import projectValidator from '../validators/projectValidator';
 
 // Importar el controlador de proyectos

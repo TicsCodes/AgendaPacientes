@@ -12,9 +12,7 @@ const projectSchema = Yup.object().shape({
 
   hour: Yup.string().required('Se debe asignar la hora de la cita'),
 
-  tel: Yup.number()
-    .max(15, 'Minimo 10 caracteres')
-    .required('Se requiere telefono de contacto'),
+  tel: Yup.number().required('Se requiere telefono de contacto'),
 
   mail: Yup.string()
     .max(50, 'Correo valido limitado a 50 caracteres')
